@@ -1,5 +1,4 @@
 <template>
-  <h1 class="text-center">產品內容</h1>
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
@@ -20,7 +19,7 @@
               {{ num }}
             </option>
           </select>
-            <button type="button" class="btn btn-danger" @click="addToCart(product.id)">
+            <button type="button" class="btn btn-danger" @click="addToCart(product.id, qty)">
               加入購物車
             </button>
         </div>
