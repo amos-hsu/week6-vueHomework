@@ -31,6 +31,7 @@
 
 <script>
 import emitter from '@/libs/emitter'
+
 export default {
   data () {
     return {
@@ -61,8 +62,7 @@ export default {
           emitter.emit('get-cart')
         })
         .catch(err => {
-          console.log(err.data.message)
-          this.isLoadingItem = ''
+           alert(err.data.message)
         })
     }
   },
