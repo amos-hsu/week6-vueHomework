@@ -55,12 +55,6 @@ export default {
       const url = `${process.env.VUE_APP_API}api/${process.env.VUE_APP_PATH}/cart`
       this.$http.post(url, { data })
         .then(res => {
-          console.log(res)
-          if (data.qty <= 0) {
-            alert('數量必須大於0')
-            // this.isLoadingItem = '';
-            return
-          }
           this.isLoadingItem = ''
           alert(res.data.message)
           emitter.emit('get-cart')
